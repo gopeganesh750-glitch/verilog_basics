@@ -1,0 +1,11 @@
+module SR_Latch_NOR(
+     input S,
+     input R,
+     output Q,
+     output Q_bar
+     );
+     
+     assign Q = ~(R | Q_bar);
+     assign Q_bar = ~(S | Q);
+endmodule
+     
